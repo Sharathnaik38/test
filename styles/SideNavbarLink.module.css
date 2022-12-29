@@ -1,0 +1,21 @@
+.link {
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.linkActive, .link:hover {
+    background: #F7F9FD;
+    border: 1px solid #D1E0FF;
+    color: #06205B;
+    transition: color 100ms ease-out;
+}
+
+.link > h2 {
+    color: #7485A5;
+    font-weight: 700;
+}
+
+.linkActive > h2 {
+    color: #06205B;
+    font-weight: 700;
+}
