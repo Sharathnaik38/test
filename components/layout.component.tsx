@@ -14,7 +14,7 @@ export default function Layout({ children }: any) {
             <aside className={`${css.asideContainer}`}>
                 <SideNavbar />
             </aside>
-            <section>
+            <section className={css.container}>
                 {children}
             </section>
         </main>

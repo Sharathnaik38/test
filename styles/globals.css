@@ -1,10 +1,9 @@
-@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 0 0 0;
-  --app-background-rgb: 255 255 255
+  --app-background-rgba: rgba(239,239,239,1)
 }
 
 * {
@@ -21,5 +20,49 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--app-background-rgb));
+  background-color: var(--app-background-rgba);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.icon {
+  color: #524DAA;
+}
+
+.icon.active {
+  color: #35425C;
+}
+
+.card.thick-border-left {
+  border-left: 5px solid #6C757D;
+}
+
+.card.thick-border-left.success {
+  border-left: 5px solid #43AA8B;
+}
+
+.card.thick-border-left.warning {
+  border-left: 5px solid #FF4D6D;
+}
+
+.card.thick-border-left.danger {
+  border-left: 5px solid #FF4D6D;;
 }

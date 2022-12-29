@@ -1,7 +1,29 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
-import Layout from '../components/layout.component'
-import Head from 'next/head'
+import Head from 'next/head';
+import type { AppProps } from 'next/app';
+import { ThemeProvider } from "@mui/material/styles";
+import { StyledEngineProvider } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+
+import { createTheme } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
+
+import '../styles/globals.css';
+import Layout from '../components/layout.component';
+
+// Create a theme instance.
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: 'rgba(27, 24, 79, 1)',
+    },
+    secondary: {
+      main: '#19857b',
+    },
+    error: {
+      main: red.A400,
+    },
+  },
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,9 +38,15 @@ export default function App({ Component, pageProps }: AppProps) {
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
           />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <StyledEngineProvider>
+        <ThemeProvider theme={theme}>
+          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </StyledEngineProvider>
     </>
   )
 }

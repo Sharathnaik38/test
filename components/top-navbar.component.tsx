@@ -28,9 +28,9 @@ export default function TopNavbar() {
                     priority
                 />
                 <div className="ml-2 flex flex-col">
-                    <h6 className="font-bold">Jim</h6>
-                    <small className="text-xs text-slate-500">Case Worker</small>
-                    <small className="text-xs text-slate-500">C Company</small>
+                    <h6 className="text-xs font-bold">Jim</h6>
+                    <small className="text-[10px] text-slate-500">Case Worker</small>
+                    <small className="text-[10px] text-slate-500">C Company</small>
                 </div>
             </div>
         </>
