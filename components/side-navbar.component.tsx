@@ -46,7 +46,7 @@ export default function SideNavbar() {
                 </MenuItem>
             </Select>
             <div className={`mt-5 ${css.menuContainer}`}>
-                <SideNavbarLink text="Dashboard" icon="dashboard" />
+                <SideNavbarLink text="Dashboard" icon="dashboard" url="/dashboard" />
                 <SideNavbarLink text="Claims" icon="grading" url="/claims" />
             </div>
         </div>
