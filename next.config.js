@@ -6,8 +6,13 @@ const nextConfig = {
       {
         source: '/',
         destination: '/dashboard',
-        permanent: true,
+        permanent: true
       },
+      {
+        source: '/claims/detail',
+        destination: '/claims/detail/quick-view',
+        permanent: true
+      }
     ]
   },
 }

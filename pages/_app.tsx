@@ -8,7 +8,7 @@ import { createTheme } from '@mui/material/styles';
 import { red } from '@mui/material/colors';
 
 import '../styles/globals.css';
-import Layout from '../components/layout.component';
+import AppLayout from '../components/layout.component';
 
 // Create a theme instance.
 const theme = createTheme({
@@ -42,9 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <AppLayout Component={Component} pageProps={pageProps} />
         </ThemeProvider>
       </StyledEngineProvider>
     </>

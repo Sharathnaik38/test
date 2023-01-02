@@ -4,6 +4,7 @@ import Icon from '@mui/material/Icon';
 import IconButton from '@mui/material/IconButton';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
+import { useRouter } from 'next/router';
 
 const claims = [
     {
@@ -249,6 +250,12 @@ const claims = [
 ]
 
 export default function Claims() {
+    const router = useRouter();
+
+    const redirectToClaimantDetailsPage = () => {
+        router.push('/claims/detail');   
+    };
+
     return (
         <div>
             <p className="mb-5 text-blue-800">Claims</p>
@@ -331,7 +338,7 @@ export default function Claims() {
                         <div className="grid gap-4 grid-cols-12 mt-5">
                             {claims && claims.map((claim, index) => (
                                 <div key={index} className="col-span-3">
-                                    <Card className={`card ${claim.class}`}>
+                                    <Card className={`card cursor-pointer ${claim.class}`} onClick={redirectToClaimantDetailsPage}>
                                         <CardContent className='p-3'>
                                             <div className='flex justify-between mb-2'>
                                                 <div className='flex flex-col'>
